@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mpdf->Output('resultat.html', \Mpdf\Output\Destination::FILE);
     // відправлення для користувача 
     header('Contetn-Type: application/pdf');
-    header('Content-Desposition: attacment; filename="resultat.html"');
+    header('Content-Desposition: inline; filename="resultat.html"');
     readfile('resultat.html');
     exit;
 }
